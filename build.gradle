@@ -1,0 +1,15 @@
+apply plugin: 'eclipse'
+apply plugin: 'java'
+
+version = '2015.09.05.19.00'
+archivesBaseName = 'tetris'
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '3.5'
+}
+
+jar {
+	manifest {
+		attributes 'Main-Class': 'de.adrodoc55.tetris.TetrisMain'
+	}
+}
