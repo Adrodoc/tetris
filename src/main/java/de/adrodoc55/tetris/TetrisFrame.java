@@ -76,19 +76,19 @@ public class TetrisFrame extends JFrame {
 						return false;
 					}
 					switch (e.getKeyCode()) {
-					case KeyEvent.VK_A:
+					case KeyEvent.VK_LEFT:
 						baustein.moveTowards(Coordinate.LEFT);
 						return true;
-					case KeyEvent.VK_D:
+					case KeyEvent.VK_RIGHT:
 						baustein.moveTowards(Coordinate.RIGHT);
 						return true;
-					case KeyEvent.VK_S:
+					case KeyEvent.VK_DOWN:
 						baustein.moveRecursivelyTowards(Coordinate.DOWN);
 						return true;
-					case KeyEvent.VK_Q:
+					case KeyEvent.VK_ENTER:
 						baustein.turnCounterClockwise();
 						return true;
-					case KeyEvent.VK_E:
+					case KeyEvent.VK_UP:
 						baustein.turnClockwise();
 						return true;
 					}
