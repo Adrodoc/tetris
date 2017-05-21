@@ -6,17 +6,17 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 public class TetrisMain {
 
-	public static void main(String[] args) {
-		try {
-			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException | InstantiationException
-				| IllegalAccessException | UnsupportedLookAndFeelException ex) {
-			ex.printStackTrace();
-		}
+  public static void main(String[] args) {
+    try {
+      UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+    } catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+        | UnsupportedLookAndFeelException ex) {
+      ex.printStackTrace();
+    }
 
-		JFrame frame = new TetrisFrame();
-		
-		frame.setVisible(true);
-	}
-	
+    JFrame frame = new TetrisFrame();
+
+    frame.setVisible(true);
+  }
+
 }
