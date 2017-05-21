@@ -5,6 +5,8 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Collection;
+import java.util.TreeSet;
 
 import javax.swing.JComponent;
 import javax.swing.JLabel;
@@ -90,8 +92,9 @@ public class TetrisGrid extends JComponent implements ActionListener {
 		}
 	}
 
-	private void checkRows(Iterable<Integer> rows) {
-		for (int y : rows) {
+	private void checkRows(Collection<Integer> rows) {
+		// y Werte aufsteigend sortieren, damit mit der obersten reihe angefangen wird
+		for (int y : new TreeSet<>(rows)) {
 			checkRow(y);
 		}
 	}
